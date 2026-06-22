@@ -29,7 +29,7 @@ env:
   ARGO_SERVER: "data-platform-argo-workflows-server.cicd-workflows:2746"
   # Public host for workflow URL; set to your domain (e.g. workflows.data.hautica.io).
   ARGO_EXTERNAL_ADDRESS: ""
-  ARGO_CLI_VERSION: "v4.0.1"
+  ARGO_CLI_VERSION: "v4.0.6"
   ARGO_HTTP1: 'true'
   # 'false' = running from inside cluster/network; 'true' = external with TLS.
   ARGO_SECURE: 'false'

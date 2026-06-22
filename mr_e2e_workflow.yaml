@@ -4319,8 +4319,7 @@ spec:
                   continue
                 fi
 
-                # Check for errors, but ignore "Not found" errors that are expected during cleanup
-                if echo "$line" | grep -Ei "fail|error|forbidden|denied" > /dev/null; then
+                if echo "$line" | grep -Eiw "fail|failed|failing|failure|error|errors|forbidden|denied|unauthorized|traceback|exception|fatal|panic" > /dev/null; then
                   # Check if this error line contains "Not found" patterns
                   if echo "$line" | grep -Ei "not found|was not found|does not exist" > /dev/null; then
                     ((ignored_error_count++))
@@ -5327,7 +5326,7 @@ spec:
       - name: data_orchestrator_core_image_name
         value: data-orchestrator-core
       - name: data_orchestrator_core_image_tag
-        value: v1.0.6
+        value: v1.0.7
       - name: dbt_workflow_core_image_name
         value: dbt-workflow-core
       - name: dbt_workflow_core_image_tag
